@@ -2,13 +2,21 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
+        <div
+        className="absolute inset-0 bg-cover bg-center hidden md:block"
         style={{
           backgroundImage: "url('/images/hero-bg.png')",
         }}
       />
+
+      {/* ===== MOBILE HERO IMAGE (PORTRAIT SAFE) ===== */}
+      <div
+        className="absolute inset-0 bg-cover bg-center md:hidden"
+        style={{
+          backgroundImage: "url('/images/hero-mobile.png')",
+        }}
+      />
+
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl">
